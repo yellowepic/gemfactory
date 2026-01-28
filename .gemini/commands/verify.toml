@@ -1,0 +1,9 @@
+description = "Performs a governance audit on the current file or code snippet."
+prompt = """
+Audit the following for compliance:
+1. **Language**: Ensure all spelling is Australian (e.g., 'optimise' not 'optimize').
+2. **Safety**: If this is ASIC monitoring code, ensure no voltage-modifying commands are present.
+3. **Execution**: Run the local governance script: !{python .gemini/skills/asic-monitor/scripts/verify.py {{args}}}
+
+If all checks pass, respond with '✅ GOVERNANCE PASSED'. Otherwise, list the failures.
+"""

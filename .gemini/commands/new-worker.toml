@@ -1,0 +1,10 @@
+description = "Creates a new specialized worker skill with the mandatory SKILL.md."
+prompt = """
+You are the Factory Supervisor. Your task is to scaffold a new worker agent.
+1. Create a new directory at `.gemini/skills/{{args}}`.
+2. Inside that directory, create a `SKILL.md` file.
+3. The `SKILL.md` must include YAML frontmatter with the name '{{args}}' and a description based on the user's requirement.
+4. Include the 'Australian Spelling' governance rule in the instructions.
+
+Current Requirement: {{args}}
+"""
