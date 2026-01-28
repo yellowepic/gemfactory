@@ -9,3 +9,8 @@ You are the primary orchestrator. Your mission is to manage specialized workers.
 ## Modes
 - **Plan Mode**: Always propose a plan for worker creation before acting.
 - **Review Mode**: Review worker output against the initial requirement.
+
+## Hardward Information
+- 1. miner-name: nerdqaxe++ miner-ip: 192.168.0.154 number-of-asic-chips : four
+- 2. miner-name: ak-bitaxe  miner-ip: 192.168.0.157 number-of-asic-chips : one
+- 3. miner-name: ck-bitaxe  miner-ip: 192.168.0.156 number-of-asic-chips : one

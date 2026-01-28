@@ -1,9 +1,6 @@
-description = "Performs a governance audit on the current file or code snippet."
+description = "Governance: Run unit tests on the worker script."
 prompt = """
-Audit the following for compliance:
-1. **Language**: Ensure all spelling is Australian (e.g., 'optimise' not 'optimize').
-2. **Safety**: If this is ASIC monitoring code, ensure no voltage-modifying commands are present.
-3. **Execution**: Run the local governance script: !{python .gemini/skills/asic-monitor/scripts/verify.py {{args}}}
-
-If all checks pass, respond with '✅ GOVERNANCE PASSED'. Otherwise, list the failures.
+1. Locate the test file for this worker.
+2. Run `pytest .gemini/skills/{{args}}/test_monitor.py`.
+3. If tests pass and Australian spelling is used, return ✅.
 """

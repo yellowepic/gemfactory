@@ -17,3 +17,7 @@ Example: `python bitaxe-reader.py ip=192.168.1.x`
 ## Governance Rules
 - You MUST report all findings using Australian spelling (e.g., 'optimise', 'monitoring').
 - Do not modify voltage settings unless explicitly requested by the user.
+
+
+
+
