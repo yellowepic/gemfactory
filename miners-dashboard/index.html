@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miner Command Centre</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./src/style.css" />
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <div class="header-content">
+        <h1>Miner Command Centre</h1>
+        <div class="status-badge" id="global-status">
+          <span class="indicator"></span>
+          <span class="text">System All Systems Nominal</span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid" id="miners-grid">
+        <!-- Miner cards will be injected here -->
+      </div>
+    </main>
+  </div>
+  <script type="module" src="./src/main.js"></script>
+</body>
+
+</html>

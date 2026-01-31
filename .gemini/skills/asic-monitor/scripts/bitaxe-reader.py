@@ -5,12 +5,17 @@ import datetime
 import sys
 
 def get_args():
-    args_dict = {"ip": None, "refresh": 10}
+    args_dict = {"ip": None, "refresh": 10, "chips": None}
     for arg in sys.argv[1:]:
         if "=" in arg:
             key, value = arg.split("=", 1)
             if key in args_dict:
-                args_dict[key] = value if key == "ip" else int(value)
+                if key == "ip":
+                    args_dict[key] = value
+                elif key == "chips":
+                    args_dict[key] = int(value)
+                else:
+                    args_dict[key] = int(value)
     return args_dict
 
 def format_val(val, unit="", decimals=2):
@@ -38,7 +43,7 @@ try:
     d = response.json()
     
     # --- Auto-Detection Logic ---
-    chips = d.get("asicCount", 4) # Default to 4 for NerdQaxe++
+    chips = params['chips'] if params['chips'] else d.get("asicCount", 4)
     freq = d.get("frequency", 0)
     expected_gh = freq * 2.06666 * chips
     actual_gh = d.get("hashRate", 0)
