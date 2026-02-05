@@ -40,7 +40,7 @@ try:
     # --- Auto-Detection Logic ---
     chips = d.get("asicCount", 4) # Default to 4 for NerdQaxe++
     freq = d.get("frequency", 0)
-    expected_gh = freq * 2.06666 * chips
+    expected_gh = freq * 2.04 * chips
     actual_gh = d.get("hashRate", 0)
     efficiency = (actual_gh / expected_gh * 100) if expected_gh > 0 else 0
 
